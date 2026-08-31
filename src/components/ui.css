@@ -76,130 +76,69 @@
 }
 
 
-
-css
-/* =========================
-   HEADER
-========================= */
-
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    background: rgba(250, 248, 241, 0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(42, 52, 32, 0.08);
+  width: 100%;
+  background: #fff;
+  position: relative;
+  z-index: 1000;
 }
 
 .header__container {
-    width: min(1200px, 92%);
-    min-height: 78px;
-    margin: 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
-
-/* LOGO */
 
 .header__logo {
-    color: #29351f;
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: 800;
-    letter-spacing: 3px;
-    line-height: 1;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111;
 }
 
-/* NAVIGATION */
-
 .header__nav {
-    display: flex;
-    align-items: center;
-    gap: 34px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
 }
 
 .header__nav a {
-    position: relative;
-
-    color: #4d5546;
-    text-decoration: none;
-
-    font-size: 14px;
-    font-weight: 500;
-
-    transition:
-        color 0.25s ease,
-        transform 0.25s ease;
+  text-decoration: none;
+  color: #111;
+  font-size: 16px;
 }
-
-.header__nav a::after {
-    content: "";
-
-    position: absolute;
-    left: 0;
-    bottom: -7px;
-
-    width: 0;
-    height: 1.5px;
-
-    background: #29351f;
-
-    transition: width 0.25s ease;
-}
-
-.header__nav a:hover {
-    color: #29351f;
-}
-
-.header__nav a:hover::after {
-    width: 100%;
-}
-
-/* BUTTON */
 
 .header__button {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-
-    padding: 12px 20px;
-
-    border-radius: 50px;
-
-    background: #29351f;
-    color: #ffffff;
-
-    text-decoration: none;
-
-    font-size: 13px;
-    font-weight: 600;
-
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.header__button span {
-    font-size: 18px;
-    line-height: 1;
+/* MOBILE */
+@media (max-width: 768px) {
+  .header__container {
+    padding: 14px 16px;
+  }
 
-    transition: transform 0.25s ease;
+  .header__nav {
+    display: none;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .header__logo {
+    font-size: 21px;
+  }
 }
 
-.header__button:hover {
-    background: #3b4a2d;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(41, 53, 31, 0.18);
-}
 
-.header__button:hover span {
-    transform: translateX(4px);
-}
 
 /* =========================
    TABLET
