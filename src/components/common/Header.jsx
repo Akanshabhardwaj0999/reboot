@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
  function Header() {
   return (
@@ -9,11 +9,11 @@
         </a>
 
         <nav className="header__nav">
-          <a href="/">Home</a>
-          <a href="/about">About Us</a>
-          <a href="/blog">Blog</a>
-          <a href="/science">Science</a>
-          <a href="/contact">Contact</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="/blog">Blog</Link>
+          <Link to="/science">Science</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
 
         <button className="header__button">
